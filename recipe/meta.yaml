@@ -1,5 +1,5 @@
 {% set name = "namex" %}
-{% set version = "0.0.8" %}
+{% set version = "0.0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/namex-{{ version }}.tar.gz
-  sha256: 32a50f6c565c0bb10aa76298c959507abdc0e850efe085dc38f3440fcb3aa90b
+  sha256: 8adfea9da5cea5be8f4e632349b4669e30172c7859e1fd97459fdf3b17469253
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
